@@ -1,0 +1,15 @@
+# @author rui.peres
+
+version: '2.1'
+
+services: 
+  web:
+     container_name: web
+
+     image: tomcat:9.0.40-jdk8
+
+     ports:
+       - 8080:8080 # http port map.
+
+     volumes:
+       - ./target/PokerGame-1.0-RC.war:/usr/local/tomcat/webapps/ROOT.war
